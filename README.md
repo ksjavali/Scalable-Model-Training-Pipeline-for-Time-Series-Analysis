@@ -98,6 +98,9 @@ selected_item_ids = pd.Series(unique_item_ids).sample(n=139, random_state=42)
 sales_df = main_sales_df[main_sales_df['item_id'].isin(selected_item_ids)]
 sales_df.to_csv('./data/subset_train_validation.csv', index=False)
 
+```
+Create a models directory.
+```
 
 ## To run the file, run this command in the terminal:
 ```
