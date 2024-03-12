@@ -49,6 +49,21 @@ Table 1: Number of models per level.
 | 12    | Predict unit sales of product x, for each store                 | 1,390            | 1                                                                |
 
 
+## Model Architecture
+The forecasting model is built using a combination of convolutional neural network (CNN) layers and long short-term memory (LSTM) layers, designed to predict one step ahead in a time series. This architecture is particularly suited for handling the complexities of temporal data found in the M5 competition dataset.
+
+### Model Details
+1. Convolutional Layers: The model begins with convolutional layers (Conv1D), which apply filters to the time series data, capturing temporal dependencies. Each convolutional layer is followed by a max-pooling layer (MaxPooling1D) to reduce the dimensionality of the data and to abstract higher-level features.
+2. LSTM Layers: After the convolutional layers, the model includes several LSTM layers which are designed to remember long-term dependencies in sequence data. The inclusion of batch normalization (BatchNormalization) helps in stabilizing the learning process and reducing the training time.
+Dense Layer: The output of the LSTM layers is flattened and fed into a dense layer (Dense), which outputs the forecast for the next time step.
+
+### Training
+The model is compiled with the Mean Squared Error (mse) loss function and the Adam optimizer, which is an efficient variant of the stochastic gradient descent algorithm.
+The model employs RootMeanSquaredError as a metric for evaluation.
+Training involves an EarlyStopping callback to prevent overfitting, which monitors the validation loss and stops training if the model does not improve for a set number of epochs.
+TensorBoard is utilized for logging and visualization purposes, allowing for monitoring of the model's performance and behavior during training.
+
+# Getting started
 ## To create a virtual environment run the following commands in the terminal:
 
 ```
