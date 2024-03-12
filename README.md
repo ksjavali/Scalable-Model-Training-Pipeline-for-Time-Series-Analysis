@@ -8,7 +8,7 @@ This repository contains a scalable model training pipeline originally developed
 
 2. **Parallelization**: Enhance the pipeline to utilize multiple cores for parallel model training.
 
-3. **Pipeline Definition**: Reorganize the code to define a machine learning pipeline, allowing sequential data processing steps culminating in model output.
+3. **Pipeline Definition**: Reorganize the code to define a machine learning pipeline using Scikit Learn, allowing sequential data processing steps culminating in model output.
 
 ## Data Description
 
