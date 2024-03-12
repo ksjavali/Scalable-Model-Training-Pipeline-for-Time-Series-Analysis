@@ -1,0 +1,2 @@
+model_level: 4    # level at which models should be trained. Refer to Data and Model Description document for different model levels
+epochs: 1        # number of epochs for training each model. Suggest <50 for quick training on local machine
